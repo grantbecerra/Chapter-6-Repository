@@ -1,0 +1,52 @@
+package exercises;
+
+import javax.swing.JOptionPane;
+
+public class RandomNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+			displayRunGame();
+			
+		}
+		public static void displayRunGame()
+		{
+			
+		int guess;
+		int result;
+		String resultString;
+		String msg;
+		int low = 1;
+		int high = 100;
+		
+		int score = 0;
+		result = low = (int)(Math.random() * high);
+		resultString = JOptionPane.showInputDialog(null, "Try to guess my number between" + low + " and " + high);
+		result= Integer.parseInt(resultString);
+		score++;
+		if(guess==result)
+		{
+			msg = "You Win!!!";
+		}
+		else
+			if(guess<result)
+			{
+				msg = "Your Guess was too low";
+				score++;
+			}
+			else
+				msg = "Your Guess was too high";
+		score++;
+		JOptionPane.showMessageDialog(null, msg + score);
+		
+	}while(guess != result);
+}
+}
+
+		
+		
+		
+	}
+
+
